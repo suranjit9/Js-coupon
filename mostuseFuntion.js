@@ -1,9 +1,6 @@
 const mainPrice = 'total-price';
 const productHistory = 'product-history';
-
-
 // Wbesite Purches BTN Activeti
- 
 function getProductprice2(price2){
     const productpriceInput2 = document.getElementById(price2);
     const productpriceinterger3 = productpriceInput2.innerText;
@@ -17,8 +14,7 @@ function getProductprice2(price2){
     //Make Purchase BTN Disabled / Eabled 
     if(productpricrNumber >= 200){
         applybtn.removeAttribute('disabled');
-    }
-    
+    } 
 }
 function PurnoNumbar (Id){
     const prepriceInput1 = document.getElementById(Id);
@@ -57,10 +53,7 @@ document.getElementById('btn-apply').addEventListener('click', function () {
     }
 
 })
-// At List Total Price
-
-
-function getProductprice(price, preprice, totalPrice ){
+function getProductprice(price, preprice, totalPrice, productName, addtitle ){
     const productpriceInput = document.getElementById(price);
     const productpriceinterger = productpriceInput.innerText;
     const productpricrNumber = parseFloat(productpriceinterger);
@@ -76,20 +69,47 @@ function getProductprice(price, preprice, totalPrice ){
     // set Price
     prepriceInput.innerText = calcultproductPrice;
     prepriceInputw.innerText = calcultproductPrice;
+
+   
+        const getprotitle = document.getElementById(productName);
+        const titleinterger = getprotitle.innerText;
     
+        // Add to Product Title 
+    
+        const addtitle1 = document.getElementById(addtitle);
+        const h1 = document.createElement('h1');
+        h1.classList.add('mb-3');
+        const count = addtitle1.childElementCount;
+        addtitle1.appendChild(h1);
+        h1.innerText = `${count+1}. ${titleinterger}`;  
 }
+// At List Total Price
+// function getProductprice(price, preprice, totalPrice ){
+//     const productpriceInput = document.getElementById(price);
+//     const productpriceinterger = productpriceInput.innerText;
+//     const productpricrNumber = parseFloat(productpriceinterger);
+//     // Total Price Call 
+//     const prepriceInput = document.getElementById(preprice);
+//     const prepriceInputinterjer = prepriceInput.innerText;
+//     const pricrNumber = parseFloat(prepriceInputinterjer);
+//     // InTotal Price
+//     const prepriceInputw = document.getElementById(totalPrice);
 
+//     // Product Calculetion
+//     const calcultproductPrice = pricrNumber+productpricrNumber;
+//     // set Price
+//     prepriceInput.innerText = calcultproductPrice;
+//     prepriceInputw.innerText = calcultproductPrice;  
+// }
 
-function getProductTitel(gettitel, addtitle){
-    const getprotitle = document.getElementById(gettitel);
-    const titleinterger = getprotitle.innerText;
-
-    // Add to Product Title 
-
-    const addtitle1 = document.getElementById(addtitle);
-    const h1 = document.createElement('h1');
-    h1.classList.add('mb-3');
-    const count = addtitle1.childElementCount;
-    addtitle1.appendChild(h1);
-    h1.innerText = `${count+1}. ${titleinterger}`;
-}
+// function getProductTitel(gettitel, addtitle){
+//     const getprotitle = document.getElementById(gettitel);
+//     const titleinterger = getprotitle.innerText;
+//     // Add to Product Title 
+//     const addtitle1 = document.getElementById(addtitle);
+//     const h1 = document.createElement('h1');
+//     h1.classList.add('mb-3');
+//     const count = addtitle1.childElementCount;
+//     addtitle1.appendChild(h1);
+//     h1.innerText = `${count+1}. ${titleinterger}`;
+// }
