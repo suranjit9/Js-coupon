@@ -16,12 +16,6 @@ function getProductprice2(price2){
         applybtn.removeAttribute('disabled');
     } 
 }
-function PurnoNumbar (Id){
-    const prepriceInput1 = document.getElementById(Id);
-    const prepriceInputinterjer1 = prepriceInput1.innerText;
-    const pricrNumber1 = parseFloat(prepriceInputinterjer1);
-    return pricrNumber1;
-}
 // Promo Code Apply Code
 document.getElementById('btn-apply').addEventListener('click', function () {
     const inputCoupon = document.getElementById('coupon-input');
