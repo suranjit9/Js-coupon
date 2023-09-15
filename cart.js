@@ -1,9 +1,5 @@
-document.getElementById('cartbtn-1').addEventListener('click', function(){
-    const findbtn = getElementBycarpricetId('price-1st');
-    const totalpricw = getElementBycarpricetId('Pricelist');
-    const calcu = findbtn + totalpricw;
-    setvalue('Pricelist',calcu);
-    // setElementBycarTiteltId ('cart-title-1');
-    
+document.getElementById('product-1').addEventListener('click', function(){
+    const findbtn = getProductprice('product-1-price', mainPrice,'dis-after-price' );
+    getProductTitel('product-1-title', productHistory);
+    getProductprice2(mainPrice);  
 })
-
